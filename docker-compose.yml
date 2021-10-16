@@ -4,7 +4,7 @@ services:
   app:
     build: ./klee
     volumes:
-      - ./benchmarks_cache:/benchmarks_cache
-      - ./benchmarks_original:/benchmarks_original
+      - ./benchmarks_cache:/home/klee/benchmarks_cache
+      - ./benchmarks_original:/home/klee/benchmarks_original
       - ./litmus:/litmus
     tty: true
