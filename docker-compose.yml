@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  app:
+    build: ./klee
+    volumes:
+      - ./benchmarks_cache:/benchmarks_cache
+      - ./benchmarks_original:/benchmarks_original
+      - ./litmus:/litmus
+    tty: true
