@@ -215,6 +215,8 @@ $ cd kleespectre/klee
 $ docker build -t kleespectre/kleespectre .
 ```
 ##Creating a KLEEspectre Docker container
+
 ```
-docker run --rm -ti --ulimit='stack=-1:-1' kleespectre/kleespectre
+docker-compose build
+docker-compose exec app bash
 ```
