@@ -63,3 +63,6 @@ RUN /bin/bash -c 'ln -s ${BASE}/klee_src /home/klee/ && ln -s ${BASE}/klee_build
 
 # TODO Remove when STP is fixed
 RUN /bin/bash -c 'echo "export LD_LIBRARY_PATH=$(cd ${BASE}/metaSMT-*-deps/stp-git-basic/lib/ && pwd):$LD_LIBRARY_PATH" >> /home/klee/.bashrc'
+
+# trick for klee to work
+RUN /bin/bash -c 'sudo cp -R /home/klee/klee_src/include/klee /usr/include && sudo mkdir /tmp/sandbox'
