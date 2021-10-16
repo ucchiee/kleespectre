@@ -6,5 +6,6 @@ services:
     volumes:
       - ./benchmarks_cache:/home/klee/benchmarks_cache
       - ./benchmarks_original:/home/klee/benchmarks_original
-      - ./litmus:/litmus
+      - ./litmus:/home/klee/litmus
+      - ./workspace:/home/klee/workspace
     tty: true
